@@ -1,0 +1,7 @@
+*.swp
+*.log
+*/__pycache__/*
+models/*
+outputs/*
+.venv/*
+.vscode/*

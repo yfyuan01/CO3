@@ -1,0 +1,189 @@
+Traceback (most recent call last):
+  File "cqr/run_training.py", line 7, in <module>
+    import torch
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/__init__.py", line 643, in <module>
+    from .functional import *  # noqa: F403
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/functional.py", line 6, in <module>
+    import torch.nn.functional as F
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/nn/modules/__init__.py", line 27, in <module>
+    from .rnn import RNNBase, RNN, LSTM, GRU, \
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/nn/modules/rnn.py", line 470, in <module>
+    class LSTM(RNNBase):
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/nn/modules/rnn.py", line 651, in LSTM
+    ) -> Tuple[Tensor, Tuple[Tensor, Tensor]]:  # noqa: F811
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/_jit_internal.py", line 814, in _overload_method
+    _check_overload_body(func)
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/_jit_internal.py", line 746, in _check_overload_body
+    parsed_def = parse_def(func)
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/_sources.py", line 95, in parse_def
+    sourcelines, file_lineno, filename = get_source_lines_and_file(fn, ErrorReport.call_stack())
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/_sources.py", line 21, in get_source_lines_and_file
+    sourcelines, file_lineno = inspect.getsourcelines(obj)
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/inspect.py", line 955, in getsourcelines
+    lines, lnum = findsource(object)
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/inspect.py", line 782, in findsource
+    lines = linecache.getlines(file, module.__dict__)
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/linecache.py", line 47, in getlines
+    return updatecache(filename, module_globals)
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/linecache.py", line 137, in updatecache
+    lines = fp.readlines()
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/codecs.py", line 319, in decode
+    def decode(self, input, final=False):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "cqr/run_training.py", line 7, in <module>
+    import torch
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/__init__.py", line 721, in <module>
+    import torch.utils.data
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/utils/data/__init__.py", line 38, in <module>
+    from torch.utils.data.dataloader_experimental import DataLoader2
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/utils/data/dataloader_experimental.py", line 11, in <module>
+    from torch.utils.data.datapipes.iter import IterableWrapper
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/utils/data/datapipes/__init__.py", line 1, in <module>
+    from . import iter
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/utils/data/datapipes/iter/__init__.py", line 37, in <module>
+    from torch.utils.data.datapipes.iter.selecting import (
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/utils/data/datapipes/iter/selecting.py", line 7, in <module>
+    import pandas  # type: ignore[import]
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 7, in <module>
+    from pandas.core.arrays.categorical import Categorical
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/pandas/core/arrays/categorical.py", line 113, in <module>
+    from pandas.core.strings.object_array import ObjectStringArrayMixin
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 963, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 906, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1280, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1252, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1394, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 95, in _path_isfile
+  File "<frozen importlib._bootstrap_external>", line 87, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 81, in _path_stat
+KeyboardInterrupt
+usage: run_training.py [-h] --output_dir OUTPUT_DIR [--model_name_or_path MODEL_NAME_OR_PATH] [--block_size BLOCK_SIZE] --train_gold_file
+                       TRAIN_GOLD_FILE --train_weak_file TRAIN_WEAK_FILE [--cross_validate] [--init_from_multiple_models]
+                       [--per_gpu_train_batch_size PER_GPU_TRAIN_BATCH_SIZE] [--gradient_accumulation_steps GRADIENT_ACCUMULATION_STEPS]
+                       [--learning_rate LEARNING_RATE] [--aug_data_weight AUG_DATA_WEIGHT] [--add_contrastive_loss]
+                       [--weight_decay WEIGHT_DECAY] [--adam_epsilon ADAM_EPSILON] [--max_grad_norm MAX_GRAD_NORM]
+                       [--num_train_epochs NUM_TRAIN_EPOCHS] [--max_steps MAX_STEPS] [--warmup_steps WARMUP_STEPS]
+                       [--save_steps SAVE_STEPS] [--local_rank LOCAL_RANK] [--no_cuda] [--overwrite_output_dir] [--seed SEED]
+run_training.py: error: the following arguments are required: --train_gold_file, --train_weak_file
+Traceback (most recent call last):
+  File "cqr/run_training.py", line 7, in <module>
+    import torch
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/__init__.py", line 613, in <module>
+    _C._initExtension(manager_path())
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/cuda/__init__.py", line 685, in <module>
+    from . import amp
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/cuda/amp/__init__.py", line 1, in <module>
+    from .autocast_mode import autocast, custom_fwd, custom_bwd  # noqa: F401
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/cuda/amp/autocast_mode.py", line 5, in <module>
+    import numpy as np
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/numpy/__init__.py", line 140, in <module>
+    from . import core
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/numpy/core/__init__.py", line 70, in <module>
+    from . import numerictypes as nt
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/numpy/core/numerictypes.py", line 103, in <module>
+    from ._string_helpers import (
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 818, in get_code
+  File "<frozen importlib._bootstrap_external>", line 916, in get_data
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "cqr/run_training.py", line 7, in <module>
+    import torch
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/__init__.py", line 613, in <module>
+    _C._initExtension(manager_path())
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/cuda/__init__.py", line 685, in <module>
+    from . import amp
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/cuda/amp/__init__.py", line 1, in <module>
+    from .autocast_mode import autocast, custom_fwd, custom_bwd  # noqa: F401
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/cuda/amp/autocast_mode.py", line 5, in <module>
+    import numpy as np
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/numpy/__init__.py", line 140, in <module>
+    from . import core
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/numpy/core/__init__.py", line 22, in <module>
+    from . import multiarray
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/numpy/core/multiarray.py", line 12, in <module>
+    from . import overrides
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/numpy/core/overrides.py", line 9, in <module>
+    from numpy.compat._inspect import getargspec
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 818, in get_code
+  File "<frozen importlib._bootstrap_external>", line 916, in get_data
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "cqr/run_training.py", line 7, in <module>
+    import torch
+  File "/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/__init__.py", line 713, in <module>
+    from torch import distributions as distributions
+  File "/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/distributions/__init__.py", line 86, in <module>
+    from .fishersnedecor import FisherSnedecor
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 963, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 906, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1280, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1252, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1394, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 95, in _path_isfile
+  File "<frozen importlib._bootstrap_external>", line 87, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 81, in _path_stat
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap_external>", line 87, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 81, in _path_stat
+FileNotFoundError: [Errno 2] No such file or directory: '/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/nn/quantized/_reference/__init__.cpython-37m-x86_64-linux-gnu.so'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "cqr/run_training.py", line 7, in <module>
+    import torch
+  File "/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/__init__.py", line 720, in <module>
+    from torch import quantization as quantization
+  File "/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/quantization/__init__.py", line 1, in <module>
+    from .quantize import *  # noqa: F403
+  File "/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/quantization/quantize.py", line 10, in <module>
+    from torch.ao.quantization.quantize import _convert
+  File "/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/ao/quantization/__init__.py", line 4, in <module>
+    from .quantize import *  # noqa: F403
+  File "/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/ao/quantization/quantize.py", line 10, in <module>
+    from torch.quantization.quantization_mappings import (
+  File "/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/quantization/quantization_mappings.py", line 9, in <module>
+    from torch.ao.quantization.quantization_mappings import (
+  File "/home/admin/miniconda3/envs/canard/lib/python3.7/site-packages/torch/ao/quantization/quantization_mappings.py", line 12, in <module>
+    import torch.nn.quantized._reference as nnqr
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 963, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 906, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1280, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1252, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1383, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 95, in _path_isfile
+  File "<frozen importlib._bootstrap_external>", line 87, in _path_is_mode_type
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "cqr/pipeline.py", line 3, in <module>
+    from cqr.train_model import TrainModel
+  File "/home/admin/baselines/Ours/cqr/train_model.py", line 7, in <module>
+    import torch
+  File "/home/admin/miniconda3/envs/cr/lib/python3.7/site-packages/torch/__init__.py", line 197, in <module>
+    from torch._C import *  # noqa: F403
+RuntimeError: KeyboardInterrupt: 
+01/11/2022 00:11:48 - WARNING - __main__ -   device: cuda, n_gpu: 1
+01/11/2022 00:11:48 - WARNING - __main__ -   device: cuda, n_gpu: 1
+01/11/2022 00:11:48 - WARNING - __main__ -   device: cuda, n_gpu: 1
+01/11/2022 00:11:48 - INFO - __main__ -   Training Fold #0
+01/11/2022 00:11:48 - INFO - __main__ -   Training Fold #0
+01/11/2022 00:11:48 - INFO - __main__ -   Training Fold #0
